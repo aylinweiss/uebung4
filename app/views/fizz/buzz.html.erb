@@ -1,0 +1,70 @@
+<h1>Web FizzBuzz Spiel</h1>
+<p>Ausgabe aller Zahlen von 1- <%= @max_number %> und Ausgabe der TEilbarkeit durch <%= @fizz_number %> und <%= @buzz_number %>.</p>
+
+<table border ="1">
+<tr> <td>Zahl</td><td>Teilbar durch <%= @fizz_number %></td><td>Teilbar durch <%= @buzz_number %></td> <td><%= @fizz_name %> <%= @buzz_name %></td></tr>
+
+<% i=0 %>
+<% while i<  @max_number %>
+	<% i=i+1 %>
+		
+		<% if i% @buzz_number  == 0 && i% @fizz_number  == 0%>
+ 			 			<tr bgcolor="#FF FF 00">
+ 	<% end %>
+		<td>
+	<%= i%>
+		</td>
+
+
+		<td> 
+	
+		<% if i% @fizz_number  == 0 %>
+ 			<b>x </b>
+ 		<% end %>	
+	 </td>
+	 <td>
+	
+	<% if i% @buzz_number  == 0 %>
+ 			 			<b> x </b>
+ 	<% end %>
+
+ 	<% if i% @buzz_number  == 0 && i% @fizz_number  == 0%>
+ 			 			
+ 	<% end %>
+
+
+
+
+
+
+
+
+		<td> 
+	
+
+		<% if i% @buzz_number  == 0 && i% @fizz_number  == 0%>
+ 			 			<%= @fizz_name %> <%= @buzz_name %>
+
+		<% elsif i% @fizz_number  == 0 %>
+ 			<%= @fizz_name%>
+ 			
+	 
+		<% elsif i% @buzz_number  == 0 %>
+ 			 			<%= @buzz_name %>
+ 	
+
+ 	
+
+ 	
+ 	<%elsif %> 
+ 					<%= i %>		 			
+
+
+ 	<% end %>
+
+ 	
+
+</td>
+</tr>
+<% end %>
+</table>
